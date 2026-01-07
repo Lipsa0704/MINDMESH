@@ -1,0 +1,25 @@
+.app {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.box {
+  width: 280px;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.parent {
+  background-color: #dbeafe;
+}
+
+.child {
+  background-color: #e0e7ff;
+}
+
+.grandchild {
+  background-color: #ede9fe;
+}
