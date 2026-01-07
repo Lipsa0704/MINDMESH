@@ -3,18 +3,21 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [bgColor, setBgColor] = useState("#f0f0f0");
 
   useEffect(() => {
+    console.log("useEffect is running. Count:", count);
+
     if (count >= 5) {
-      document.body.style.backgroundColor = "#d1f7c4";
+      setBgColor("#c8f7c5");
     } else {
-      document.body.style.backgroundColor = "#f0f0f0";
+      setBgColor("#f0f0f0");
     }
-  }, [count]);
+  }, [count]); // ✅ correct dependency
 
   return (
-    <div className="container">
-      <h1>useState & useEffect Example</h1>
+    <div className="container" style={{ backgroundColor: bgColor }}>
+      <h1>useEffect Working Example</h1>
       <p className="count">Count: {count}</p>
 
       <div className="buttons">
