@@ -1,22 +1,31 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-  // useState: declare state
   const [count, setCount] = useState(0);
+  const [bgColor, setBgColor] = useState("#f0f0f0");
 
-  // useEffect: runs after component renders
   useEffect(() => {
-    console.log("Count changed:", count);
-  }, [count]); // dependency array
+    console.log("useEffect is running. Count:", count);
+
+    if (count >= 5) {
+      setBgColor("#c8f7c5");
+    } else {
+      setBgColor("#f0f0f0");
+    }
+  }, [count]); // ✅ correct dependency
 
   return (
-    <div>
-      <h2>Count: {count}</h2>
-      <button onClick={() => setCount(count + 1)}>
-        Increase
-      </button>
+    <div className="container" style={{ backgroundColor: bgColor }}>
+      <h1>useEffect Working Example</h1>
+      <p className="count">Count: {count}</p>
+
+      <div className="buttons">
+        <button onClick={() => setCount(count + 1)}>Increment</button>
+        <button onClick={() => setCount(count - 1)}>Decrement</button>
+      </div>
     </div>
   );
 }
 
-export default App
+export default App;

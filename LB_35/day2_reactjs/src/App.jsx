@@ -14,4 +14,4 @@ function TitleUpdater() {
   );
 }
 
-export default App;
+export default TitleUpdater;
