@@ -21,3 +21,8 @@ nav{
   font-size: 40px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.lot li{
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
