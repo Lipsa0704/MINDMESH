@@ -1,35 +1,56 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, {useState} from "react";
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App=()=>{
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
 
-  return (
+
+  const validate = () => {
+  let newErrors = {};
+
+    if (!name) newErrors.name = "Name is required";
+
+    if (!email) newErrors.email = "Email is required";
+    else if (!email.includes("@"))
+      newErrors.email = "Email is not valid";
+
+    if (!password) newErrors.password = "Password is required";
+    else if (password.length < 6)
+      newErrors.password = "Password must be at least 6 characters";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validate()) {
+      alert("Form Submitted Successfully ✅");
+    }
+  };
+  return(
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="section">
+        <h1>Registation link</h1>
+        <form action="">
+          <label> Name:</label>
+          <input type="text" placeholder="Enter name" value={name}
+            onChange={(e) => setName(e.target.value)}/>
+          <label> Email:</label>
+          <input type="email" placeholder="Enter Email" value={email}
+            onChange={(e) => setEmail(e.target.value)}/>
+          <label> Password:</label>
+          <input type="password" placeholder="Enter Password" value={password}
+            onChange={(e) => setPassword(e.target.value)}/>
+          <button>Submit</button>
+        </form>
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
     </>
   )
 }
 
-export default App
+export default App;
