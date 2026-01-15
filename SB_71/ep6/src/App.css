@@ -1,0 +1,44 @@
+/* Reset default margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full screen */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Themes */
+.light {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Button */
+button {
+  padding: 12px 25px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
