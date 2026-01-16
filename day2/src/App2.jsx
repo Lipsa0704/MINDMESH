@@ -1,0 +1,22 @@
+import React, { useState, useEffect } from "react";
+import "./index.css";
+
+function CounterEffect() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Count: ${count}`;
+  }, [count]);
+
+  return (
+    <div>
+      <h1>hi</h1>
+      <h2>Count: {count}</h2>
+      <button onClick={() => setCount(count + 1)}>
+        Increase
+      </button>
+    </div>
+  )
+}
+
+export default CounterEffect;
