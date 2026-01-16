@@ -1,12 +1,18 @@
 import React from "react";
 import "./App.css";
 
+import Product from "./components/Product";
+import Cart from "./components/Cart";
 
-const App=()=>{
-  return(
+const App = () => {
+  return (
     <>
-      <h1>hgg</h1>
+      <Product />
+      <Cart />
     </>
-  )
-}
+  );
+};
+
 export default App;
+
+
