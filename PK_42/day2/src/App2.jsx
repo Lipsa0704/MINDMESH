@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./index.css";
 
 function CounterEffect() {
   const [count, setCount] = useState(0);
@@ -16,7 +16,7 @@ function CounterEffect() {
         Increase
       </button>
     </div>
-  );
+  )
 }
 
 export default CounterEffect;

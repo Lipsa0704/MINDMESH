@@ -1,0 +1,18 @@
+button,input{
+    padding: 10px;
+    height: 60px;
+    width: 150px;
+    margin-left: 50px;
+    font-size:20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+h1{
+    margin-left: 220px;
+    margin-top: 300px;
+}
+
+div{
+    margin-left: 300px;
+}
