@@ -1,15 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-// Import App2 instead of App
-import App from './App' 
-import CounterEffect from './App2' 
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <>
-    <App /> 
-    <CounterEffect />
-    </>
+    <App />
   </React.StrictMode>
-)
+);

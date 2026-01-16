@@ -1,10 +1,17 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import UserProvider from "./context/UserContext";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <UserProvider>
-    <App />
-  </UserProvider>
-);
+export const UserContext = createContext();
+
+function Main() {
+  const [user, setUser] = useState("Guest");
+
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      <App />
+    </UserContext.Provider>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<Main />);

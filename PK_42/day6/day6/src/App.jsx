@@ -1,15 +1,15 @@
-import { useContext } from "react";
-import "./App.css";
-import { UserContext } from "./context/UserContext";
-import Login from "./components/Login";
-import Dashboard from "./components/Dashboard";
+import React, { useContext } from "react";
+import { UserContext } from "./main";
 
 function App() {
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
 
   return (
     <div>
-      {user ? <Dashboard /> : <Login />}
+      <h2>User: {user}</h2>
+      <button onClick={() => setUser("Pallavi")}>
+        Change User
+      </button>
     </div>
   );
 }

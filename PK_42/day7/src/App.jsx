@@ -1,45 +1,29 @@
-import React from 'react'
-import {useDispatch,useSelector} from 'react-redux';
-import { useState } from 'react';
-import { decrement, increment, incrementByAmount } from './redux/features/counterSlice';
+import { useQuery } from "@tanstack/react-query";
 
-const App = () => {
-  const dispatch = useDispatch()
+function App() {
+  const fetchUsers = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    return res.json();
+  };
 
-  const count = useSelector((state)=>state.counter.value)
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["users"],
+    queryFn: fetchUsers,
+  });
 
-  const [num, setNum] = useState(5)
+  if (isLoading) return <h3>Loading...</h3>;
+  if (error) return <h3>Error loading data</h3>;
 
   return (
     <div>
-      <h1>{count}</h1>
-
-      <button onClick={()=>{
-        dispatch(increment())
-
-      }}>Increment</button>
-
-      <button onClick={()=>{
-        dispatch(decrement())
-        
-      }}>Decrement</button>
-
-      <input 
-      value={num}
-      type='number'
-       onChange={(e)=>{
-       setNum(console.log(e.target.value));
-      }}/>
-
-      <button onClick={()=>{
-        dispatch(incrementByAmount(Number(num)))
-        
-      }}>
-        Increase by Amount
-      </button>
-
+      <h2>Users List</h2>
+      <ul>
+        {data.map((user) => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
