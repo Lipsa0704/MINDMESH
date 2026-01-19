@@ -18,7 +18,7 @@ function App() {
 
       {isLoggedIn ? (
         <>
-          <p className='text-cyan-100 text-xl'>Welcome User!</p>
+          <p className='text-cyan-100 text-xl'>Welcome , Login successfully</p>
           <button onClick={logout} className='bg-emerald-200 h-7 w-20 border-2 border-b-amber-900 rounded-2xl'>Logout</button>
         </>
       ) : (
