@@ -13,7 +13,7 @@ function App() {
   if (error) return <h3>Error occurred</h3>
 
   return (
-    <div className='hlw h-130 w-105 flex items-center justify-center flex-col gap-2 ml-100 mt-10 border-4 border-black bg-emerald-400 '>
+    <div className='hlw h-130 w-105 flex items-center justify-center flex-col gap-2 ml-100 mt-10 border-4 border-black bg-emerald-500 '>
       <h2 className='bg-amber-400 h-10 w-80 text-2xl text-center rounded-sm text-red-600'>Custom Hooks Demo</h2>
 
       {isLoggedIn ? (
