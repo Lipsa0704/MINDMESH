@@ -5,7 +5,7 @@ import './App.css'
 function App() {
   return (
     <div className="p-10">
-      <h2 className="text-xl font-bold mb-4 text-cyan-900">
+      <h2 className="text-xl font-bold mb-4 text-cyan-800">
         Component Library Demo
       </h2>
 
@@ -14,7 +14,7 @@ function App() {
           Options
         </Menu.Button>
 
-        <Menu.Items className="absolute mt-2 w-40 bg-white border rounded shadow">
+        <Menu.Items className="absolute mt-3 w-40 bg-white border rounded shadow">
           <Menu.Item>
             {({ active }) => (
               <button
