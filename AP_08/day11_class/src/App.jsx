@@ -1,13 +1,15 @@
 import { Menu } from '@headlessui/react'
+import './App.css'
+
 
 function App() {
   return (
     <div className="p-10">
-      <h2 className="text-xl font-bold mb-4">
+      <h2 className="text-xl font-bold mb-4 text-cyan-900">
         Component Library Demo
       </h2>
 
-      <Menu as="div" className="relative inline-block text-left">
+      <Menu as="div" className="relative inline-block text-left ">
         <Menu.Button className="bg-blue-500 text-white px-4 py-2 rounded">
           Options
         </Menu.Button>
