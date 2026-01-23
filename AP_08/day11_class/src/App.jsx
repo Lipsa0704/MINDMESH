@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className="p-10">
+    <div className="p-11">
       <h2 className="text-xl font-bold mb-4 text-cyan-800">
         Component Library Demo
       </h2>
