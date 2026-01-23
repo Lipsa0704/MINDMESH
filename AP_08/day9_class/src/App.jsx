@@ -18,7 +18,7 @@ function App() {
       {isLoggedIn ? (
         <>
           <p>Welcome User!</p>
-          <button onClick={logout}>Logout</button>
+          <button onClick={logout}>Logoutttttt</button>
         </>
       ) : (
         <button onClick={login}>Login</button>
