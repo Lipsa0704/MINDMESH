@@ -1,0 +1,10 @@
+function App() {
+  return (
+    <div>
+      <h1>Hello React</h1>
+      <button>Click Me</button>
+    </div>
+  )
+}
+
+export default App
