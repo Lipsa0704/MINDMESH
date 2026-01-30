@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="p-10">
       <h2 className="text-xl font-bold mb-4 text-cyan-800">
-        Component Library Demo
+        Component Library Demo here
       </h2>
 
       <Menu as="div" className="relative inline-block text-left ">
