@@ -5,7 +5,7 @@ const users = Array.from({ length: 1000 }, (_, i) => `User ${i + 1}`)
 function App() {
   return (
     <div style={{ padding: 20 }}>
-      <h2>Performance Optimization</h2>
+      <h2>Performance Optimization Demo</h2>
 
       <FixedSizeList
         height={300}
