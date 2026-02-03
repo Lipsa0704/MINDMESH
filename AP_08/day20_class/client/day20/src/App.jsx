@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h2>Real-time Notification</h2>
+      <h2>Real-time Notificati</h2>
       <p>{message}</p>
     </div>
   );
