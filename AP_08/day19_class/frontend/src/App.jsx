@@ -10,8 +10,8 @@ function App() {
   }, []);
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h2>Student List (Mock API)</h2>
+     <div style={{ padding: "20px" }}>
+       <h2>Student List (Mock API)</h2>
 
       <ul>
         {students.map(student => (
@@ -20,8 +20,10 @@ function App() {
           </li>
         ))}
       </ul>
-    </div>
+     </div>
   );
 }
+
+
 
 export default App;
