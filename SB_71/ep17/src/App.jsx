@@ -24,7 +24,7 @@ export default function App() {
         </h1>
 
         <p className="text-center text-gray-600 mb-8">
-          GitHub Actions – Build & Deploy Preview
+          GitHub Actions – Build & Deploy Previews
         </p>
 
         <div className="flex justify-center">
