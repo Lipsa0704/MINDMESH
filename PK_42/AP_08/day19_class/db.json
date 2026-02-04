@@ -1,7 +1,0 @@
-{
-  "students": [
-    { "id": 1, "name": "Ananya", "course": "MCA" },
-    { "id": 2, "name": "Riya", "course": "BCA" },
-    { "id": 3, "name": "Amit", "course": "BTech" }
-  ]
-}
